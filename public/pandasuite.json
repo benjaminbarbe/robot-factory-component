@@ -3,92 +3,77 @@
   "main": "",
 
   "system": {
-    "localization": false,
-    "actions": [
-      {
-        "id": "toMarker",
-        "name": "Change Image",
-        "locale_name": {
-          "fr_FR": "Change Image"
-        },
-        "params": [
-          { "id": "useless", "name": "Useless", "locale_name": {"fr_FR": "Inutile"}, "type": "Boolean" }
-        ]
-      }
-    ],
-    "events": [
-      {
-        "id": "triggerMarker",
-        "name": "Image",
-        "locale_name": {
-          "fr_FR": "Image"
-        }
-      }
-    ],
-    "markers": [
-      {
-        "params": [
-          { "id": "src", "name": "Source", "locale_name": {"fr_FR": "Source"}, "type": "String" }
-        ]
-      }
-    ]
+    "markers": false
   },
 
   "properties": [
     {
-      "id": "searchTerm",
-      "name": "Search Term",
+      "id": "maxTop",
+      "name": "Max Top",
       "locale_name": {
-        "fr_FR": "Terme de recherche"
+        "fr_FR": "Max Haut"
       },
-      "type": "String",
-      "value": "panda"
+      "type": "Integer",
+      "value": 8
+    },
+    {
+      "id": "maxMiddle",
+      "name": "Max Middle",
+      "locale_name": {
+        "fr_FR": "Max Milieu"
+      },
+      "type": "Integer",
+      "value": 8
+    },
+    {
+      "id": "maxBottom",
+      "name": "Max Bottom",
+      "locale_name": {
+        "fr_FR": "Max Bas"
+      },
+      "type": "Integer",
+      "value": 8
     }
   ],
 
   "events": [
     {
-      "id": "imageChanged",
-      "name": "Image Changed",
+      "id": "validated",
+      "name": "Validated",
       "locale_name": {
-        "fr_FR": "Image Changée"
+        "fr_FR": "Validée"
       }
     }
   ],
 
   "actions": [
     {
-      "id": "changeColor",
-      "name": "Change Color",
-      "params": [
-        {
-          "id": "backgroundColor",
-          "name": "Background Color",
-          "locale_name": {
-            "fr_FR": "Couleur de fond"
-          },
-          "type": "String",
-          "value": "#FFFFFF"
-        }
-      ]
+      "id": "validate",
+      "name": "Validate"
     }
   ],
 
   "synchronization": [
     {
-      "id": "synchroImages",
-      "name": "Synchronize images",
+      "id": "synchroTop",
+      "name": "Synchronize Top",
       "locale_name": {
-        "fr_FR": "Synchroniser images"
+        "fr_FR": "Synchroniser Haut"
       }
-    }
-  ],
-
-  "resources": [
+    },
     {
-      "id": "my_image.png",
-      "type": "Image",
-      "localization": false
+      "id": "synchroMiddle",
+      "name": "Synchronize Middle",
+      "locale_name": {
+        "fr_FR": "Synchroniser Milieu"
+      }
+    },
+    {
+      "id": "synchroBottom",
+      "name": "Synchronize Bottom",
+      "locale_name": {
+        "fr_FR": "Synchroniser Bas"
+      }
     }
   ]
 }
